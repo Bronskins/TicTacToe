@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: black;
+  margin-top: 50px;
+  width: 50%;
+  padding: 5px;
+  gap: 5px;
+  height: 800px;
+}
+.container div {
+  background-color: #40ac40;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container div::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("https://freepngimg.com/thumb/red_cross/28043-8-red-cross-transparent.png");
+  background-size: 12rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+}
+.container .hover:hover {
+  background-color: #cf961a;
+  cursor: pointer;
+}
+.container .hover:hover::after {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
