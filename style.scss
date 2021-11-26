@@ -5,34 +5,66 @@
     transition: all 0.5s;
 }
 
+body{
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+
+
 $circle: "https://th.bing.com/th/id/R.8012637022312d10533fbd1bd77b4bf1?rik=TotxnZZKNB%2f95w&riu=http%3a%2f%2fimages.clipartpanda.com%2fcircle-clipart-22241-red-circle-clip-art.png&ehk=KDDPqIgtVkqkps%2fqk7etjWyKr1EPUY0Ldc9nNPIJ2NE%3d&risl=&pid=ImgRaw&r=0";
 $cross: "https://freepngimg.com/thumb/red_cross/28043-8-red-cross-transparent.png";
 
+#h1-title{
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 3rem;
+    text-shadow: 1px 1px 5px white;
+    border: 1px solid black;
+    padding: 20px 0;
+    box-shadow: 0px 0px 5px black;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #FFFF;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        width: 60px;
+        height: 60px;
+        border: 2px solid #FFF;
+        box-shadow: 0px 0px 5px white;
+        border-radius: 30px;
+        margin-left: 20px;
+    }
+}
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     margin: 0 auto;
     justify-content: center;
-    margin-top: 50px;
     width: 50%;
     padding: 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: rgb(236, 238, 146);
     gap: 10px;
     height: 800px;
 
     & div {
-        background-color: rgb(95, 143, 73);
+        background-color: rgb(57, 129, 170);
         width: 100%;
         height: 100%;
+        box-shadow: 0px 0px 7px black;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        border-radius: 20px;
-        border: 3px solid rgb(0, 0, 0);
+        border: 1px solid black;
+        border-radius: 15px;
         &::after{
             content: "";
             width: 100%;
@@ -46,8 +78,17 @@ $cross: "https://freepngimg.com/thumb/red_cross/28043-8-red-cross-transparent.pn
         }
     }
     & .hover:hover{
-        background-color: rgb(34, 53, 116);
+        background-color: rgb(130, 162, 221);
+        box-shadow: 1px 1px 20px rgb(0, 0, 0);
         cursor: pointer;
+        animation-name: colors;
+        animation-fill-mode: both;
+        transform: translateY(-25px);
+        box-shadow: 0 1.2rem 1.8rem rgba(0, 0, 0, 0.2);
+        animation-direction:alternate;
+        animation-duration: 0.6s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
         &::after{
             opacity: 1;
             transition: 0.5s;
@@ -61,4 +102,210 @@ $cross: "https://freepngimg.com/thumb/red_cross/28043-8-red-cross-transparent.pn
         }
     }
     
+}
+
+@keyframes colors {
+    0%{
+        background-color: rgb(130, 162, 221);
+        box-shadow: 1px 1px 0px rgb(0, 0, 0);
+    }
+    50%{
+        background-color: rgb(255, 255, 255);
+        box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    }
+
+    100%{
+        background-color: rgb(130, 162, 221);
+        box-shadow: 1px 1px 20px rgb(0, 0, 0);
+    }
+}
+
+.results{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & div  {
+        margin: 0 100px;
+
+     
+        & h2 {
+            margin: 0 0px;
+            margin-top:10px ;
+            font-family: 'Comfortaa', cursive;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 5px black;
+            text-align: center;
+            &:last-child{
+                color: rgb(252, 0, 0);
+                font-size: 2.5rem;
+                text-shadow: 1px 1px 5px black;
+            }
+        }
+    }
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+
+    & button{
+        margin: 0px 20px;
+        width: 100px;
+        height: 20px;
+        font-family: 'Comfortaa', cursive;
+        font-size: 1rem;
+        padding: 20px 0;
+        display: flex;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px black;
+        color: #FFF;
+        background-color: rgb(35, 36, 95);
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover{
+            background-color: rgb(238, 238, 247);
+            color:rgb(35, 36, 95);
+            transform: translateY(-3px);
+            box-shadow: 0 1.2rem 1.8rem rgba(0, 0, 0, 0.2);
+        
+        }
+    }
+
+    & h3{
+        font-family: 'Comfortaa', cursive;
+    }
+}
+
+footer{
+    background-color: rgb(35, 36, 95);
+    text-align: center;
+    color: #FFF;
+    padding: 15px 0;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1rem;
+    margin-top: 100px;
+    box-shadow: 0px 0px 10px black;
+    text-shadow: 0px 0px 5px white;
+}
+
+@media screen and (max-width: 1000px){
+
+    #h1-title{
+        font-size: 2rem;
+
+        & img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .options{
+        display: flex;
+        justify-content: center;
+        & button{
+            width: 100px;
+            font-size: 1rem;
+            height: 20px;
+            margin: 0 10px;
+        }
+
+        & h3 {
+            font-size: 1rem;
+        }
+    }
+
+    .results{
+        & div { 
+            margin: 0 30px;
+            & h2{
+                font-size: 1.3rem;
+                &:last-child{
+                    font-size: 2.5rem;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+
+    #master-container {
+        width: 100%;
+        height: 100%;
+
+        & div {
+            height: 120px;
+        }
+    }
+    footer{
+        margin-top: 40px;
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    #master-container {
+        width: 100%;
+        height: 100%;
+
+        & div {
+            height: 200px;
+        }
+    }
+}
+@media screen and (max-width: 500px){
+
+    #h1-title{
+        font-size: 1.3rem;
+
+        & img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .options{
+        display: flex;
+        justify-content: center;
+        & button{
+            width: 65px;
+            font-size: 0.6rem;
+            height: 20px;
+            margin: 0 10px;
+        }
+
+        & h3 {
+            font-size: 0.8rem;
+        }
+    }
+
+    .results{
+        & div { 
+            margin: 0 30px;
+            & h2{
+                font-size: 0.8rem;
+                &:last-child{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    #master-container {
+        width: 100%;
+        height: 100%;
+
+        & div {
+            height: 120px;
+        }
+    }
+    footer{
+        margin-top: 40px;
+        font-size: 0.8rem;
+    }
 }

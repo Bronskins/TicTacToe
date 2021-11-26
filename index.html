@@ -5,11 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <title>TicTacToe</title>
 </head>
 <body>
-    <div class="master-container">
-        <div class="container">
+
+    <h1 id="h1-title">Tic-Tac-Toe <img id="logo" src="https://th.bing.com/th/id/R.3502d1ca849b062acb85cf68a8c48bcd?rik=O8NJvOaNVuI39g&pid=ImgRaw&r=0" alt="TicTacToeLogo"></h1>
+
+    <div class="options">
+        <button id="reset">
+            Reset
+        </button>
+        <button id="difficulty">
+            Difficulty
+        </button>
+
+        <h3 id="mode" style="color:blue;">Normal</h3>
+    </div>
+
+    <div class="results">
+        <div id="player">
+            <h2>Player:</h2>
+        </div>
+        <div id="ia">
+            <h2>IA:</h2>
+        </div>
+    </div>
+
+
+ 
+         <div id="master-container" class="container">
             <div class="item hover" id="1"></div>
             <div class="item hover" id="2"></div>
             <div class="item hover" id="3"></div>
@@ -20,9 +47,13 @@
             <div class="item hover" id="8"></div>
             <div class="item hover" id="9"></div>
         </div>
-    </div>
+
 
 
     <script src="script.js"></script>
+
+    <footer>
+        All rights reserved. 2021
+    </footer>
 </body>
 </html>
